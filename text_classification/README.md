@@ -5,6 +5,10 @@ Marketing copywriting identification
 - paddlepaddle >= 2.3
 - paddlenlp >= 2.5.1
 - scikit-learn >= 1.0.2
+**克隆PaddlePaddle：**
+```shell
+git clone https://github.com/PaddlePaddle/PaddleNLP.git
+```
 **安装PaddlePaddle：**
  环境中paddlepaddle-gpu或paddlepaddle版本应大于或等于2.3, 请参见[飞桨快速安装](https://www.paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/pip/linux-pip.html)根据自己需求选择合适的PaddlePaddle下载命令。
 **安装PaddleNLP：**
