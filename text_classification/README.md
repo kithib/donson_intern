@@ -27,7 +27,43 @@ pip install scikit-learn
 ```shell
 pip install -r requirements.txt
 ```
-### 加载模型并预测：
+### 训练模型：
+```shell
+#训练命令
+python train.py \
+    --do_train \
+    --do_eval \
+    --do_export \
+    --model_name_or_path ernie-1.0-large-zh-cw \
+    --output_dir checkpoint \
+    --device gpu:1\
+    --num_train_epochs 300 \
+    --early_stopping True \
+    --early_stopping_patience 5 \
+    --learning_rate 3e-5 \
+    --max_length 128 \
+    --per_device_eval_batch_size 32 \
+    --per_device_train_batch_size 32\
+    --metric_for_best_model accuracy \
+    --load_best_model_at_end \
+    --logging_steps 5 \
+    --evaluation_strategy epoch \
+    --save_strategy epoch \
+    --save_total_limit 1 
+```
+```shell
+#评估命令
+python train.py \     
+    --do_eval \     
+    --debug True \     
+    --device gpu \     
+    --model_name_or_path checkpoint \     
+    --output_dir checkpoint \    
+    --per_device_eval_batch_size 32 \     
+    --max_length 128 \     
+    --test_path './data/dev.txt'
+```
+### 加载模型，推理：
 模型文件为/checkpoint，使用时将/checkpoint文件放入项目目录中,使用taskflow进行模型预测，请保证paddlenlp版本大于2.5.1:
 ```
 from paddlenlp import Taskflow
