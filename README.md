@@ -26,4 +26,4 @@ Evaluation examples in dev dataset: 631.0(30.9%) | precision: 91.15 | recall: 96
 ### best score：
 人工评估500次分割任务，其中包含2k+句子段，分割准确率为97.3%
 ### todo：
-待完成 ①②③④1️⃣2️⃣3️⃣ 分割
+待完成 ①②③④1️⃣2️⃣3️⃣等特殊标志的分割
