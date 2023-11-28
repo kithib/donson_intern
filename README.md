@@ -27,3 +27,20 @@ Evaluation examples in dev dataset: 631.0(30.9%) | precision: 91.15 | recall: 96
 人工评估500次分割任务，其中包含2k+句子段，分割准确率为97.3%
 ### todo：
 待完成 ①②③④1️⃣2️⃣3️⃣等特殊标志的分割
+
+## 检索算法（search） 纯算法
+### input：
+文本，prompt（品牌，品类，受众，关键字）
+### process：
+1.使用whoose实现基于词的匹配baseline
+2.利用cos相似度实现基于词义的匹配baseline
+3.增加原始数据清洗和处理方法，提高检索成功率
+4.利用key，value，query思想，利用百川大模型，将数据库文案总结出key关键词，利用query进行检索
+### result：已经接入生产。
+### best score：
+评测标准选择：查准率和查全率，Precision at K
+数据库中有3.7w条数据，抽检1000次query效果
+查准率：0.997
+查全率：0.953
+Precision at K：0.906 （K = 10）
+
