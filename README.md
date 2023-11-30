@@ -44,3 +44,15 @@ Evaluation examples in dev dataset: 631.0(30.9%) | precision: 91.15 | recall: 96
 查全率：0.953
 Precision at K：0.906 （K = 10）
 
+## 营销大模型数据工程(pre_train_dataProcess)
+### input:
+小红书，微博等爬下来的原始数据
+### process:
+1.解析数据，parquet格式解析为json格式
+2.数据预处理
+3.聚类，去除掉语义相似或相同的文案，提高文案多样性（接入公司算法，不能开源）
+4.营销文案判断
+### result:接入数据流
+
+
+
