@@ -2,7 +2,7 @@
 ## 1.数据预处理
 obsfile2json.ipynb
 data_process.ipynb
-##2.聚类
+## 2.聚类
 ### 聚类主函数：
 python main_nlp.py  --config_path=/home/kit/clustering4server_simple/data/sentiment/config_sentiment.json #注意一下显卡是否被占用
 ### 聚类结果转excel：
