@@ -1,0 +1,10 @@
+name: Extractor
+description: Use ES to search the best n text
+parameters:
+  type: object
+  properties:
+    text:
+      type: string
+      description: The brand category characteristic audience of the text that needs to be searched, expressed in json format
+  required:
+    - text
