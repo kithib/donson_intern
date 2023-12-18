@@ -54,5 +54,11 @@ Precision at K：0.906 （K = 10）
 4.营销文案判断
 ### result:接入数据流
 
+## chatGLM开发
+基于chatGLM开发的程序，具体信息见chatGLM文件夹
+### 1.prompt 路由程序
+### 2.自由问句提取程序
+### 3.意图识别程序
+### 4.langchain tool程序
 
 
