@@ -10,9 +10,9 @@ from elasticsearch.helpers import bulk
 
 from elasticsearch import Elasticsearch
 
-USERNAME = "elastic"
-PASSWORD = "dGrpGquemieevI=+H+lu"
-ELATICSEARCH_ENDPOINT = "localhost:9200"
+USERNAME = ""
+PASSWORD = ""
+ELATICSEARCH_ENDPOINT = ""
 
 url = f'http://{USERNAME}:{PASSWORD}@{ELATICSEARCH_ENDPOINT}'
 print("url: " + url)
