@@ -14,6 +14,13 @@ def tool_config_from_file(tool_name, directory="/home/kit/kit/ChatGLM3/langchain
                 return yaml.safe_load(f)
     return None
 
+def output_format(action:str) -> str:
+    #print("before format {}".format(action))
+    action = action.split('```')[1].strip()
+    action = json.loads(action)
+    return action['action_input']
+
+
 class ChatGLM3(LLM):
     max_token: int = 8192
     do_sample: bool = False
@@ -120,6 +127,7 @@ Action:
         # print("======")
         # print(history)
         # print("======")
+        query = " You can only output English. \n" + query
         _, self.history = self.model.chat(
             self.tokenizer,
             query,
@@ -130,4 +138,5 @@ Action:
         )
         response = self._extract_tool()
         history.append((prompt, response))
+        response = output_format(response)
         return response
