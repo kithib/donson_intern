@@ -2,7 +2,7 @@
 
 ## camel
 
-已完成，使用chatglm3代条chatgpt
+已完成，使用chatglm3代替chatgpt
 
 优点：使用简单的本地模型，快速有效的解决小问题
 
