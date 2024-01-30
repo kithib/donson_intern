@@ -49,8 +49,8 @@ class ChatGLM3(LLM):
             trust_remote_code=True
         )
         self.model = AutoModel.from_pretrained(
-            model_name_or_path, config=model_config, trust_remote_code=True
-        ).half().cuda()
+            model_name_or_path, config=model_config, trust_remote_code=True, device_map="auto",
+        ).half()
 
     def _tool_history(self, prompt: str):
         ans = []
