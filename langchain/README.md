@@ -24,6 +24,8 @@
 
 ## Simulate a two-player/mutil-player Dungeons & dragons Game
 
+已完成
+
 模拟两人或多人龙与地下城游戏。
 
 设计了对话模拟器用于协调主角与地下城城主之间的对话。
