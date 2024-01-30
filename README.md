@@ -134,3 +134,14 @@ Precision at K：0.906 （K = 10）
 2.某些维度会有1分的差距
 
 3.作为一个参考性打分工具接入生产
+
+## langchain Agent 学习
+
+利用langchain提供的接口，完成agent模拟的各个场景实现。
+
+### 已完成
+
+1. camel
+2. Generative_agent
+3. Gymnasium
+4. Dungeons&dragons
