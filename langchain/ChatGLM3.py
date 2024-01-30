@@ -3,7 +3,9 @@ from langchain.llms.base import LLM
 from transformers import AutoTokenizer, AutoModel, AutoConfig
 from typing import List, Optional
 import os
-import yaml
+import yaml 
+  
+ 
 
 def tool_config_from_file(tool_name, directory="/home/kit/kit/ChatGLM3/langchain_demo/Tool"):
     """search tool yaml and return json format"""
@@ -49,7 +51,7 @@ class ChatGLM3(LLM):
             trust_remote_code=True
         )
         self.model = AutoModel.from_pretrained(
-            model_name_or_path, config=model_config, trust_remote_code=True, device_map="auto",
+            model_name_or_path, config=model_config, trust_remote_code=True,device_map="cuda:1",
         ).half()
 
     def _tool_history(self, prompt: str):

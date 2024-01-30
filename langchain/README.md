@@ -19,3 +19,11 @@
 但是，这种记忆机制并不完善，我的课题则是基于此。
 
 ## Gymnasium
+
+已完成，代理-环境交互循环模拟，可用于模拟强化学习
+
+## Simulate a two-player/mutil-player Dungeons & dragons Game
+
+模拟两人或多人龙与地下城游戏。
+
+设计了对话模拟器用于协调主角与地下城城主之间的对话。
